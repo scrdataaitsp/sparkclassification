@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 40,
+  "id": "4ccaa856-7264-439a-a9ac-fd6b07360026",
+  "activities": [
+    {
+      "id": "2102bc2f-c4fc-4416-b4e6-911010af03a8",
+      "name": "POLinesCMC",
+      "blocks": [
+        {
+          "id": "be81b433-4cad-42de-be20-66d84f2875cc",
+          "type": "Microsoft.DPrep.DataSourceBlock",
+          "arguments": {
+            "path": {
+              "target": 0,
+              "resourceDetails": [
+                {
+                  "path": "/Users/srram/Desktop/POLinesCMC.txt"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "b908a363-5a68-41cd-bdc2-cd527b92dd38",
+          "type": "Microsoft.DPrep.ParseDelimitedBlock",
+          "arguments": {
+            "preview": false,
+            "columnHeadersMode": 1,
+            "separator": "\t",
+            "fileEncoding": 0,
+            "skipRowsMode": 0,
+            "handleQuotedLineBreaks": false
+          }
+        },
+        {
+          "id": "c2bf149b-0131-45c8-b072-053c81533d57",
+          "type": "Microsoft.DPrep.SetColumnTypesBlock",
+          "arguments": {
+            "columnConversion": [
+              {
+                "columnId": "Purchasing Document",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "Profit Center",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "Purchase Requisition",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "Item of Requisition",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "CoCd",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "Material freight grp",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "Item",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "Storage Location",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "Material Group",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "Purchasing Info Rec.",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "Target Quantity",
+                "typeProperty": 3,
+                "typeArguments": {}
+              }
+            ]
+          }
+        },
+        {
+          "id": "7e63f483-4d27-4b6b-bfc4-a206194ea3c2",
+          "type": "Microsoft.DPrep.SampleBlock",
+          "arguments": {
+            "samples": [
+              {
+                "sampleId": "571f966d-01c4-43c6-8f58-25d444af87cf",
+                "sampleRevision": "e3a5d8e2-5e72-4141-b23b-991b804a9c4a",
+                "sampleName": "Full File",
+                "sampleRunner": {
+                  "id": null,
+                  "type": 0
+                },
+                "remoteGeneratorProperties": {},
+                "sampleStrategy": 3,
+                "topArguments": {
+                  "sampleCount": 10000
+                },
+                "randomNArguments": {
+                  "sampleCount": 10000
+                },
+                "randomPercentArguments": {
+                  "probability": 0.1
+                },
+                "allowAutoGen": true,
+                "isDisabled": false
+              }
+            ],
+            "activeSample": "571f966d-01c4-43c6-8f58-25d444af87cf"
+          }
+        },
+        {
+          "id": "b950bfbb-2c60-4fb6-ad78-3f87c43a6e0c",
+          "type": "Microsoft.DPrep.HandlePathColumnBlock",
+          "arguments": {
+            "pathColumnOperation": 0
+          }
+        }
+      ],
+      "inspectors": [
+        {
+          "id": "ba7d330c-a1cc-44cb-a2ed-30e34420743d",
+          "type": "Microsoft.DPrep.DataQualityInspector",
+          "arguments": {},
+          "reference": {
+            "referenceType": 0,
+            "referenceContainerPath": null,
+            "referencedActivityId": "2102bc2f-c4fc-4416-b4e6-911010af03a8",
+            "referencedBranchId": null,
+            "referencedStep": {
+              "stepReferenceType": 1,
+              "referencedStepId": null,
+              "fallback": 1
+            },
+            "anonymousSteps": null
+          },
+          "isBackground": false
+        },
+        {
+          "id": "3769ea98-24f0-4d6b-8854-fde7f1bde756",
+          "type": "Microsoft.DPrep.DataProfileInspector",
+          "arguments": {},
+          "reference": {
+            "referenceType": 0,
+            "referenceContainerPath": null,
+            "referencedActivityId": "2102bc2f-c4fc-4416-b4e6-911010af03a8",
+            "referencedBranchId": null,
+            "referencedStep": {
+              "stepReferenceType": 0,
+              "referencedStepId": "b950bfbb-2c60-4fb6-ad78-3f87c43a6e0c",
+              "fallback": 1
+            },
+            "anonymousSteps": null
+          },
+          "isBackground": true
+        }
+      ]
+    }
+  ],
+  "runConfigurations": []
+}

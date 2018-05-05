@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 40,
+  "id": "814b3115-8410-4cd7-b282-60c30818ed1e",
+  "activities": [
+    {
+      "id": "a4e5b08c-998f-476f-8c2f-2508fec41bdd",
+      "name": "POLines",
+      "blocks": [
+        {
+          "id": "fe05c9b3-4c1c-493f-8062-2826cf4044c2",
+          "type": "Microsoft.DPrep.DataSourceBlock",
+          "arguments": {
+            "path": {
+              "target": 1,
+              "resourceDetails": [
+                {
+                  "path": "https://srramstorage.blob.core.windows.net/srramhdispark-2018-03-28t20-34-23-500z/HdiNotebooks/PySpark/POLines.txt",
+                  "sas": {
+                    "id": "https://srramstorage.blob.core.windows.net/srramhdispark-2018-03-28t20-34-23-500z/HdiNotebooks/PySpark/POLines.txt",
+                    "secretType": "AzureMLSecret"
+                  },
+                  "storageAccountName": "srramstorage",
+                  "storageAccountKey": {
+                    "id": "srramstorage",
+                    "secretType": "AzureMLSecret"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "7c391708-0507-4fd6-9c13-f1377cd4ed63",
+          "type": "Microsoft.DPrep.ParseDelimitedBlock",
+          "arguments": {
+            "preview": false,
+            "columnHeadersMode": 1,
+            "separator": "\t",
+            "fileEncoding": 0,
+            "skipRowsMode": 0,
+            "handleQuotedLineBreaks": false
+          }
+        },
+        {
+          "id": "99b71253-a9b5-4c22-a3b4-78b23c98a54a",
+          "type": "Microsoft.DPrep.SetColumnTypesBlock",
+          "arguments": {
+            "columnConversion": [
+              {
+                "columnId": "Target Quantity",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "Item of Requisition",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "Item",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "Material freight grp",
+                "typeProperty": 3,
+                "typeArguments": {}
+              }
+            ]
+          }
+        },
+        {
+          "id": "cecdf135-0d52-4c06-83a9-54d396ee4d63",
+          "type": "Microsoft.DPrep.SampleBlock",
+          "arguments": {
+            "samples": [
+              {
+                "sampleId": "77f8b608-5155-4758-bab1-415c085b38f6",
+                "sampleRevision": "92a65b3a-36b6-45e6-a096-889af135055e",
+                "sampleName": "Full File",
+                "sampleRunner": {
+                  "id": null,
+                  "type": 0
+                },
+                "remoteGeneratorProperties": {},
+                "sampleStrategy": 3,
+                "topArguments": {
+                  "sampleCount": 10000
+                },
+                "randomNArguments": {
+                  "sampleCount": 10000
+                },
+                "randomPercentArguments": {
+                  "probability": 0.1
+                },
+                "allowAutoGen": true,
+                "isDisabled": false
+              }
+            ],
+            "activeSample": "77f8b608-5155-4758-bab1-415c085b38f6"
+          }
+        },
+        {
+          "id": "8ec3353e-f796-4edd-b24b-381420b67406",
+          "type": "Microsoft.DPrep.HandlePathColumnBlock",
+          "arguments": {
+            "pathColumnOperation": 0
+          }
+        }
+      ],
+      "inspectors": [
+        {
+          "id": "c33df206-9056-44de-ac71-49ca70552245",
+          "type": "Microsoft.DPrep.DataQualityInspector",
+          "arguments": {},
+          "reference": {
+            "referenceType": 0,
+            "referenceContainerPath": null,
+            "referencedActivityId": "a4e5b08c-998f-476f-8c2f-2508fec41bdd",
+            "referencedBranchId": null,
+            "referencedStep": {
+              "stepReferenceType": 1,
+              "referencedStepId": null,
+              "fallback": 1
+            },
+            "anonymousSteps": null
+          },
+          "isBackground": false
+        }
+      ]
+    }
+  ],
+  "runConfigurations": []
+}

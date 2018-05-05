@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 40,
+  "id": "6d17c12c-a8ac-4555-bdb3-e29a3ef32220",
+  "activities": [
+    {
+      "id": "23bdf244-ba2a-4fbf-9b71-438e05afa95f",
+      "name": "POLinesCMC",
+      "blocks": [
+        {
+          "id": "88039d30-59a0-4233-b72c-4e79263c6b64",
+          "type": "Microsoft.DPrep.ReferenceActivityBlock",
+          "arguments": {
+            "reference": {
+              "referenceType": 1,
+              "referenceContainerPath": "./POLinesCMC.dsource",
+              "referencedActivityId": "2102bc2f-c4fc-4416-b4e6-911010af03a8",
+              "referencedBranchId": null,
+              "referencedStep": null,
+              "anonymousSteps": null
+            }
+          }
+        },
+        {
+          "id": "15ec2e86-6b38-4ca5-bbe3-78c020f33472",
+          "type": "Microsoft.DPrep.FilterNumberColumnBlock",
+          "arguments": {
+            "columnId": "Purchasing Document",
+            "filterResult": 0,
+            "clauseRelationship": 1,
+            "clauses": [
+              {
+                "operator": 0,
+                "value": 4501005542.0
+              }
+            ]
+          }
+        }
+      ],
+      "inspectors": [
+        {
+          "id": "3ee91d38-aea5-449c-bb8a-d960ccbb2583",
+          "type": "Microsoft.DPrep.DataQualityInspector",
+          "arguments": {},
+          "reference": {
+            "referenceType": 0,
+            "referenceContainerPath": null,
+            "referencedActivityId": "23bdf244-ba2a-4fbf-9b71-438e05afa95f",
+            "referencedBranchId": null,
+            "referencedStep": {
+              "stepReferenceType": 1,
+              "referencedStepId": null,
+              "fallback": 1
+            },
+            "anonymousSteps": null
+          },
+          "isBackground": false
+        }
+      ]
+    }
+  ],
+  "runConfigurations": []
+}
