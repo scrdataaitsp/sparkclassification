@@ -1,0 +1,6 @@
+address: srramhdispark-ssh.azurehdinsight.net
+type: cluster
+userManagedEnvironment: false
+username: sshuser
+yarnDeployMode: cluster
+password: AzureMlSecret=4d0a0f9b-2e4a-f6ac-e658-67c8b543eab6

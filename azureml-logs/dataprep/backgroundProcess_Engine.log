@@ -1,0 +1,12 @@
+2018-03-28 15:16:51.0007|DEBUG|Engine|ProjectManagement|Reading the project from: /Users/srram/workspace/classification/POLinesCMC.dsource|f2262998-32c4-11e8-b5bd-8c85903be7f9
+2018-03-28 15:16:51.5579|DEBUG|Engine|ProjectManagement|Successfully read the project from: /Users/srram/workspace/classification/POLinesCMC.dsource|f2262998-32c4-11e8-b5bd-8c85903be7f9
+2018-03-28 15:16:51.6106|DEBUG|Engine|ProjectManagement|Deleting recovery files: /Users/srram/workspace/classification/POLinesCMC.dsource.tmp, /Users/srram/workspace/classification/POLinesCMC.dsource.user.tmp|f2262998-32c4-11e8-b5bd-8c85903be7f9
+2018-03-28 15:16:54.6313|DEBUG|Engine|ProjectManagement|Deleting recovery files: /Users/srram/workspace/classification/POLinesCMC.dsource.tmp, /Users/srram/workspace/classification/POLinesCMC.dsource.user.tmp|f2262998-32c4-11e8-b5bd-8c85903be7f9
+2018-05-03 14:22:37.3857|DEBUG|Engine|ProjectManagement|Reading the project from: /Users/srram/workspace/classification/POLinesCMC.dsource|55c40da2-4f07-11e8-8ce4-5a0048c26801
+2018-05-03 14:22:37.8270|DEBUG|Engine|ProjectManagement|Successfully read the project from: /Users/srram/workspace/classification/POLinesCMC.dsource|55c40da2-4f07-11e8-8ce4-5a0048c26801
+2018-05-03 14:22:37.8654|DEBUG|Engine|ProjectManagement|Deleting recovery files: /Users/srram/workspace/classification/POLinesCMC.dsource.tmp, /Users/srram/workspace/classification/POLinesCMC.dsource.user.tmp|55c40da2-4f07-11e8-8ce4-5a0048c26801
+2018-05-03 14:22:40.7848|DEBUG|Engine|ProjectManagement|Deleting recovery files: /Users/srram/workspace/classification/POLinesCMC.dsource.tmp, /Users/srram/workspace/classification/POLinesCMC.dsource.user.tmp|55c40da2-4f07-11e8-8ce4-5a0048c26801
+2018-05-04 11:30:52.2149|DEBUG|Engine|ProjectManagement|Reading the project from: /Users/srram/workspace/classification/POLinesCMC.dsource|816a467a-4fb8-11e8-bd91-8c85903be7f9
+2018-05-04 11:30:52.6182|DEBUG|Engine|ProjectManagement|Successfully read the project from: /Users/srram/workspace/classification/POLinesCMC.dsource|816a467a-4fb8-11e8-bd91-8c85903be7f9
+2018-05-04 11:30:52.6583|DEBUG|Engine|ProjectManagement|Deleting recovery files: /Users/srram/workspace/classification/POLinesCMC.dsource.tmp, /Users/srram/workspace/classification/POLinesCMC.dsource.user.tmp|816a467a-4fb8-11e8-bd91-8c85903be7f9
+2018-05-04 11:30:55.1357|DEBUG|Engine|ProjectManagement|Deleting recovery files: /Users/srram/workspace/classification/POLinesCMC.dsource.tmp, /Users/srram/workspace/classification/POLinesCMC.dsource.user.tmp|816a467a-4fb8-11e8-bd91-8c85903be7f9

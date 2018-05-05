@@ -1,0 +1,4 @@
+type: local
+pythonLocation: python3
+sparkSubmitLocation: spark-submit
+nativeSharedDirectory: ~/.azureml/share/
